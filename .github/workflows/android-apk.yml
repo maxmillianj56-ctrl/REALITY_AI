@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout project
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Set up Java
         uses: actions/setup-java@v5
@@ -32,6 +32,18 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.9"
+
+      - name: Diagnose project structure
+        run: |
+          echo "=== ROOT DIRECTORY ==="
+          pwd
+          ls -la
+          echo "=== ANDROID BUILD FILES ==="
+          find . -maxdepth 5 -type f \( \
+            -name "gradlew" -o \
+            -name "settings.gradle" -o \
+            -name "settings.gradle.kts" \
+          \)
 
       - name: Build APK
         working-directory: RealityAI-Android
