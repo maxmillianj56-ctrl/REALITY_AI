@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">REALITY AI</string>
+    <string name="capture_channel_name">Screen Capture Session</string>
+    <string name="capture_channel_description">Persistent status notification while MediaProjection preview capture is active.</string>
+    <string name="capture_notification_title">REALITY AI Capture Active</string>
+    <string name="capture_notification_text">Capturing display frames for offline visual analysis preview. Tap Stop to end immediately.</string>
+    <string name="action_stop_capture">Stop Capture</string>
+</resources>

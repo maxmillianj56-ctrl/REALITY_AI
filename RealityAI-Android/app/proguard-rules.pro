@@ -1,0 +1,2 @@
+-keep class com.realityai.companion.domain.model.** { *; }
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
